@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Circle dependence</title>
+	<script type="text/javascript" src="./js/deps/knockout.js"></script>
+	<script type="text/javascript" data-main="js/require_boot.js" src="js/deps/require.js"></script>
+</head>
+<body>
+	<section class="userInputSection">
+		<label>Zip Code</label>
+		<input type="text" name="zipCode" id="zipCode" class="zipCode" data-bind="value: zipCode">
+		<button type="button" id="sendZipCode" class="sendZipCode" data-bind="click: sendZipCode">SEND!</button>
+	</section>
+	<hr>
+	<section class="dataInfo">
+		<button type="button" id="refreshData" class="refreshData" data-bind="click: refreshData">REFRESH!</button>
+		<p data-bind="visible: hasCep">Your cep is: <span id="zipCodePlaceholder" class="zipCodePlaceholder" data-bind="text: dataModel.zipCode"></span></p>
+	</section>
+
+</body>
+<script>
+	// var objeto = {
+	// 	zipCode: ko.observable(5)
+	// }
+	// ko.applyBindings(objeto);
+</script>
+
+</html>
